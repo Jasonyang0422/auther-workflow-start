@@ -14,10 +14,10 @@ app.directive('navbar', function ($state, $location, Auth) {
 			scope.logout = function(){
 				Auth.logout()
 					.then(function(){
-						console.log('nice');
+						$state.go('home');
 					})
 					.catch(function(err){
-						console.log(err)
+						console.log(err);
 					});
 			};
 
